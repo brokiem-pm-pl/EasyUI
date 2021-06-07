@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace EasyUI\utils;
 
 use Closure;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\Utils;
 
 trait SubmitListener {
@@ -33,5 +33,4 @@ trait SubmitListener {
             ($this->submitListener)($player);
         }
     }
-
 }

@@ -31,5 +31,4 @@ class Option {
     public function setText(string $text): void {
         $this->text = $text;
     }
-
 }

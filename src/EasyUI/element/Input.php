@@ -13,8 +13,8 @@ namespace EasyUI\element;
 
 
 class Input extends Element {
-    private ?string $defaultText = null;
-    private ?string $placeholder = null;
+    private ?string $defaultText;
+    private ?string $placeholder;
     private ?string $submittedText = null;
 
     public function __construct(?string $headerText, ?string $defaultText = null, ?string $placeholder = null) {
@@ -44,5 +44,4 @@ class Input extends Element {
             "placeholder" => $this->placeholder ?? ""
         ];
     }
-
 }

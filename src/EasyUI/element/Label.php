@@ -27,5 +27,4 @@ class Label extends Element {
     public function serializeBody(): array {
         return [];
     }
-
 }

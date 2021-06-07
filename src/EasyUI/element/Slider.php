@@ -80,5 +80,4 @@ class Slider extends Element {
             "step" => $this->stepLength
         ];
     }
-
 }

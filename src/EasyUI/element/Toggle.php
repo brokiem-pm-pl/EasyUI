@@ -44,5 +44,4 @@ class Toggle extends Element {
             "default" => $this->defaultChoice
         ];
     }
-
 }

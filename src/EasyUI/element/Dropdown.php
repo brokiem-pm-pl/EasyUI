@@ -22,5 +22,4 @@ class Dropdown extends Selector {
             "default" => $this->getDefaultIndex()
         ];
     }
-
 }

@@ -22,5 +22,4 @@ class StepSlider extends Selector {
             "default" => $this->getDefaultIndex()
         ];
     }
-
 }

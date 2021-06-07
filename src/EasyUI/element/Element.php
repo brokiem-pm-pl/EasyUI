@@ -17,8 +17,7 @@ use JsonSerializable;
  */
 abstract class Element implements JsonSerializable {
 
-    /** @var string|null */
-    private $headerText;
+    private ?string $headerText;
 
     public const TYPE_DROPDOWN = "dropdown";
     public const TYPE_INPUT = "input";
@@ -51,5 +50,4 @@ abstract class Element implements JsonSerializable {
             "text" => $this->headerText ?? ""
         ]);
     }
-
 }
