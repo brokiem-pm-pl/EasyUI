@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace EasyUI\utils;
 
 use Closure;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\Utils;
 
 trait CloseListener {
@@ -34,5 +34,4 @@ trait CloseListener {
             ($this->closeListener)($player);
         }
     }
-
 }

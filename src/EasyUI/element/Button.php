@@ -19,7 +19,7 @@ class Button implements JsonSerializable {
     use Submittable;
 
     private string $text;
-    private ?ButtonIcon $icon = null;
+    private ?ButtonIcon $icon;
 
     public function __construct(string $text, ?ButtonIcon $icon = null, ?Closure $listener = null) {
         $this->text = $text;
@@ -50,5 +50,4 @@ class Button implements JsonSerializable {
 
         return $data;
     }
-
 }

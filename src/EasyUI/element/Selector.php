@@ -75,5 +75,4 @@ abstract class Selector extends Element {
     public function assignResult($result): void {
         $this->submittedOptionId = $this->getOptionByIndex($result)->getId();
     }
-
 }

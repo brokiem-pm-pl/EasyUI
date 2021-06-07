@@ -14,7 +14,7 @@ use Closure;
 use EasyUI\element\ModalOption;
 use EasyUI\Form;
 use pocketmine\form\FormValidationException;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class ModalForm extends Form {
     private string $contentText;
@@ -81,5 +81,4 @@ class ModalForm extends Form {
     protected function onAccept(Player $player): void {}
 
     protected function onDeny(Player $player): void {}
-
 }

@@ -10,15 +10,16 @@ declare(strict_types=1);
 
 namespace EasyUI\utils;
 
-use EasyUI\element\Dropdown;
 use EasyUI\element\Element;
 use EasyUI\element\Input;
+use EasyUI\element\Label;
+use EasyUI\element\Option;
 use EasyUI\element\Slider;
 use EasyUI\element\StepSlider;
 use EasyUI\element\Toggle;
 
 class FormResponse {
-    private array $elements = [];
+    private array $elements;
 
     /**
      * FormResponse constructor.
@@ -28,37 +29,36 @@ class FormResponse {
         $this->elements = $elements;
     }
 
-    public function getInputSubmittedText(string $inputId): string {
-        $element = $this->getElement($inputId, Input::class);
-        return $element === "" ? "" : $element->getSubmittedText();
+    public function getInputSubmittedText(string $inputId): ?string {
+        $element = $this->getElement($inputId);
+        return $element === null ? null : $element->getSubmittedText();
     }
 
-    public function getToggleSubmittedChoice(string $toggleId): bool {
-        $element = $this->getElement($toggleId, Toggle::class);
-        return $element === "" ? "" : $element->getSubmittedChoice();
+    public function getToggleSubmittedChoice(string $toggleId): ?bool {
+        $element = $this->getElement($toggleId);
+        return $element === null ? null : $element->getSubmittedChoice();
     }
 
-    public function getSliderSubmittedStep(string $sliderId): float {
-        $element = $this->getElement($sliderId, Slider::class);
-        return $element === "" ? "" : $element->getSubmittedStep();
+    public function getSliderSubmittedStep(string $sliderId): ?float {
+        $element = $this->getElement($sliderId);
+        return $element === null ? null : $element->getSubmittedStep();
     }
 
-    public function getStepSliderSubmittedOptionId(string $sliderId): string {
-        $element = $this->getElement($sliderId, StepSlider::class);
-        return $element === "" ? "" : $element->getSubmittedOptionId();
+    public function getStepSliderSubmittedOptionId(string $sliderId): ?string {
+        $element = $this->getElement($sliderId);
+        return $element === null ? null : $element->getSubmittedOptionId();
     }
 
-    public function getDropdownSubmittedOptionId(string $dropdownId): string {
-        $element = $this->getElement($dropdownId, Dropdown::class);
-        return $element === "" ? "" : $element->getSubmittedOptionId();
+    public function getDropdownSubmittedOptionId(string $dropdownId): ?string {
+        $element = $this->getElement($dropdownId);
+        return $element === null ? null : $element->getSubmittedOptionId();
     }
 
     /**
      * @param string $id
-     * @param string $expectedClass
-     * @return Element|string
+     * @return Element|Input|Label|Option|Slider|StepSlider|Toggle
      */
-    private function getElement(string $id, string $expectedClass) {
-        return $this->elements[$id] ?? "";
+    private function getElement(string $id): ?Element {
+        return $this->elements[$id] ?? null;
     }
 }

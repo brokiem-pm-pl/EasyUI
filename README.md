@@ -108,7 +108,6 @@ class ExampleForm extends SimpleForm {
         });
         $this->addButton($button);
     }
-
 }
 ```
 
@@ -128,7 +127,6 @@ class ExampleForm extends ModalForm {
     protected function onDeny(Player $player): void {
         $player->sendMessage("You pressed 'Deny' >:(");
     }
-
 }
 ```
 **NOTE**: `onCreation()` is also available on ModalForms.
