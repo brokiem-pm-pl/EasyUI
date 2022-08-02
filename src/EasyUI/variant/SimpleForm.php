@@ -10,13 +10,13 @@ declare(strict_types=1);
 
 namespace EasyUI\variant;
 
+use EasyUI\EasyForm;
 use EasyUI\element\Button;
-use EasyUI\Form;
 use EasyUI\utils\Closable;
 use pocketmine\form\FormValidationException;
 use pocketmine\player\Player;
 
-class SimpleForm extends Form {
+class SimpleForm extends EasyForm {
     use Closable;
 
     private array $buttons = [];

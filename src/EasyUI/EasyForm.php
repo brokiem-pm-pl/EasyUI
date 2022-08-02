@@ -10,9 +10,9 @@ declare(strict_types=1);
 
 namespace EasyUI;
 
-use pocketmine\form\Form as PmForm;
+use pocketmine\form\Form;
 
-abstract class Form implements PmForm {
+abstract class EasyForm implements Form {
     private string $title;
 
     public const TYPE_SIMPLE_FORM = "form";

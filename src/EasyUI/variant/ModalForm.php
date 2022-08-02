@@ -11,12 +11,12 @@ declare(strict_types=1);
 namespace EasyUI\variant;
 
 use Closure;
+use EasyUI\EasyForm;
 use EasyUI\element\ModalOption;
-use EasyUI\Form;
 use pocketmine\form\FormValidationException;
 use pocketmine\player\Player;
 
-class ModalForm extends Form {
+class ModalForm extends EasyForm {
     private string $contentText;
     private ModalOption $acceptOption;
     private ModalOption $denyOption;

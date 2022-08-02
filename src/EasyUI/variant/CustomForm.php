@@ -11,14 +11,14 @@ declare(strict_types=1);
 namespace EasyUI\variant;
 
 use Closure;
+use EasyUI\EasyForm;
 use EasyUI\element\Element;
-use EasyUI\Form;
 use EasyUI\utils\Closable;
 use EasyUI\utils\FormResponse;
 use pocketmine\player\Player;
 use pocketmine\utils\Utils;
 
-class CustomForm extends Form {
+class CustomForm extends EasyForm {
     use Closable;
 
     private array $elements = [];
