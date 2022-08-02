@@ -47,7 +47,7 @@ class SimpleForm extends EasyForm {
     }
 
     protected function getType(): string {
-        return Form::TYPE_SIMPLE_FORM;
+        return EasyForm::TYPE_SIMPLE_FORM;
     }
 
     public function handleResponse(Player $player, $data): void {

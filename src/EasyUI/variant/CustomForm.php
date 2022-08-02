@@ -30,7 +30,7 @@ class CustomForm extends EasyForm {
     }
 
     protected function getType(): string {
-        return Form::TYPE_CUSTOM_FORM;
+        return EasyForm::TYPE_CUSTOM_FORM;
     }
 
     /**

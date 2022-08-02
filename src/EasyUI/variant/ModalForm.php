@@ -53,7 +53,7 @@ class ModalForm extends EasyForm {
     }
 
     protected function getType(): string {
-        return Form::TYPE_MODAL_FORM;
+        return EasyForm::TYPE_MODAL_FORM;
     }
 
     public function handleResponse(Player $player, $data): void {
